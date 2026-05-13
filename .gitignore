@@ -1,10 +1,10 @@
+# Dependencies
+frontend/node_modules/
+node_modules/
+
 # Python
 __pycache__/
 *.py[cod]
-*.so
-*.egg-info/
-dist/
-build/
 .venv/
 venv/
 env/
@@ -15,15 +15,8 @@ env/
 # Logs
 *.log
 
-# Environment variables
-.env
-
-# Node
-node_modules/
-frontend/dist/
-
-# IDE
+# IDE / OS
 .idea/
 .vscode/
-*.swp
-*.swo
+.DS_Store
+Thumbs.db
