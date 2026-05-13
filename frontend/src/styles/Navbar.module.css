@@ -1,0 +1,157 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--bg-secondary);
+  box-shadow: var(--card-shadow);
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.toggleBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0 0.3rem;
+  line-height: 1;
+}
+.toggleBtn:hover { color: var(--blue-border); }
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logoIcon {
+  font-size: 1.6rem;
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navItem {
+  background: var(--bg-primary);
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: background 0.2s;
+}
+.navItem:hover { background: #e2e8f0; }
+
+.resetBtn {
+  background: var(--bg-primary);
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+  color: var(--text-primary);
+}
+.resetBtn:hover { background: #e2e8f0; }
+
+.toggleMode {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  color: var(--text-primary);
+}
+
+/* ---------- Profile dropdown (unified) ---------- */
+.profileContainer {
+  position: relative;
+}
+
+.profileBtn {
+  background: var(--bg-primary);
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  transition: background 0.2s;
+  line-height: 1;
+}
+.profileBtn:hover {
+  background: var(--border-color);
+}
+
+.profileDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  padding: 0.5rem;
+  min-width: 160px;
+  z-index: 50;
+  animation: fadeIn 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.profileName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0.2rem 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.2rem;
+}
+
+.dropdownItem {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.15s;
+  text-align: left;
+}
+.dropdownItem:hover {
+  background: var(--bg-primary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

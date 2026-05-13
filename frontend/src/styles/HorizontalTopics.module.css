@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 12px 4px;            /* more breathing room */
+  margin-bottom: 1.5rem;
+
+  /* ---- smooth momentum scrolling on iOS / trackpad ---- */
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  /* ---- slim scrollbar ---- */
+  scrollbar-width: thin;        /* Firefox */
+  scrollbar-color: var(--border-color) transparent;  /* Firefox */
+}
+.container::-webkit-scrollbar {
+  height: 5px;
+}
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 10px;
+}
+.container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary);
+}
+
+.topic {
+  white-space: nowrap;
+  padding: 7px 16px;              /* slightly larger touch area */
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  user-select: none;
+  flex-shrink: 0;                /* prevent shrinking */
+}
+
+.topic:hover {
+  background: var(--border-color);
+  transform: translateY(-1px);
+}
+
+.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
